@@ -1,0 +1,9 @@
+childPipelines:
+   scmUrls:
+      - git@github.com:kumada626/child-pipeline.git
+jobs:
+  main:
+    requires: [ ~pr, ~commit ]
+    image: node:12
+    steps:
+      - first: echo 'foo'
