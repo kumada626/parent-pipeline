@@ -6,4 +6,6 @@ jobs:
     requires: [ ~pr, ~commit ]
     image: node:12
     steps:
-      - first: echo 'foo'
+      - first: echo $FOO
+    secrets:
+      - FOO
